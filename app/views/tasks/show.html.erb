@@ -1,0 +1,13 @@
+<h1>
+<%= @task.content %>
+ の詳細ページ</h1>
+
+<p>
+<%= @task.content %>
+</p>
+
+<%= link_to '一覧に戻る', tasks_path %>
+
+<%= link_to 'このタスクを編集する', edit_task_path(@task) %>
+
+<%= link_to 'このタスクを完了する', @mtask, method: :delete, data: { confirm: 'タスクを完了しますがよろしいですか？' } %>
